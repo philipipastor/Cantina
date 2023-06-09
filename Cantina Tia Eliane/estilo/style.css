@@ -3,11 +3,16 @@
 *{
     padding: 0px;
     margin: 0px;
+    
 }
 
 header{
     text-align: center;
     background-color: #EB1101;
+}
+
+header > img{
+    width: auto;
 }
 
 .material-symbols-outlined {
@@ -54,7 +59,7 @@ header{
     height: 30px;
 }
 
-img#logo{
+.logo{
     height: 80px;
     padding: 10px;
     margin-bottom: 5px;
@@ -180,3 +185,8 @@ img {
     margin-left:10px ;
 }
 
+footer{
+    background-color: #EB1101;
+    text-align: center;
+    padding: 5px;
+}

@@ -18,7 +18,7 @@
     </head>
     <body>
         <header>
-            <img id="logo" src="imagens/logo.png" alt="logo" />
+            <img class="logo" src="imagens/logo.png" alt="logo" />
             <a href="formulario.html"
                 ><span class="material-symbols-outlined" id="login"
                     >person</span
@@ -26,11 +26,11 @@
             >
             <span class="material-symbols-outlined" id="menu">menu</span>
             <nav>
-                <a href="#">Combos</a>
-                <a href="#">Biscoitos</a>
-                <a href="#">Refeições</a>
-                <a href="#">Doces</a>
-                <a href="#">Bebidas</a>
+                <a href="#combos">Combos</a>
+                <a href="#salgados">Salgados</a>
+                <a href="#refeicoes">Refeições</a>
+                <a href="#doces">Doces</a>
+                <a href="#bebidas">Bebidas</a>
                 <input type="text" placeholder="Digite o que você procura" />
                 <button type="submit">Pesquisar</button>
             </nav>
@@ -38,125 +38,379 @@
         <main>
             <div id="container">
                 <div id="produtos">
-                    <h3>Combos</h3>
-                    <div class="categoria-produto">
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
+                    <section id="combos">
+                        <h3>Combos</h3>
+                        <div class="categoria-produto">
+                            <div class="produto">
+                                <h4>Salgado + guaracamp</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/salgadoguaracamp.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$8,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
+                            <div class="produto">
+                                <h4>Pizza + guaracamp</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/pizzaguara.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$8,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Cachorro quente + guaracamp</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/cachorroguara.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$8,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Hambúrguer + guaraná</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/hambguaara.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$8,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
+                    <section id="salgados">
+                        <h3>Salgados</h3>
+                        <div class="categoria-produto">
+                            <div class="produto">
+                                <h4>Salgado</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/croissant.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$7,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
+                            <div class="produto">
+                                <h4>Misto-quente</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/misto-quente.jpeg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$5,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Cachorro-quente</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/cachorro.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$7,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Hambúrguer</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/hamburguer.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$7,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
                         </div>
+                    </section>
+                    
+                    <section id="refeicoes">
+                        <h3>Refeições</h3>
+                        <div class="categoria-produto">
+                            <div class="produto">
+                                <h4>Almoço</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/croissant.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$18,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Almoço Junior</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/misto-quente.jpeg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$16,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Almoço Fit</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/cachorro.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$20,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Almoço Peixe</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/hamburguer.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$22,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
+                    <section id="doces">
+                        <h3>Doces</h3>
+                        <div class="categoria-produto">
+                            <div class="produto">
+                                <h4>Fini</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/fini.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$1,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
+                            <div class="produto">
+                                <h4>Mentos/Halls</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/misto-quente.jpeg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$2,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Twix</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/twix.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$1,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Batom</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/batom.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$2,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Doce de abóbora</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/doce de abobora.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$1,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Pé de moça</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/pe de moça.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$1,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
+                    <section id="bebidas">
+                        <h3>Bebidas</h3>
+                        <div class="categoria-produto">
+                            <div class="produto">
+                                <h4>Água</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/agua.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$2,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
+                            <div class="produto">
+                                <h4>Água com gás</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/agua com gas.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$3,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Suco de caixinha</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/suco caixinha.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$3,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Suco da polpa</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/sucopolpa.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$6,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Nescau</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/nescau.webp"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$3,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Toddynho</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/toddynho.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$2,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Refrigerante (350ML)</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/refri.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$5,00</strong>
+                                    <button>Adicionar</button>
+                                </div>
+                            </div>
+                            <div class="produto">
+                                <h4>Refrigerante (250ML)</h4>
+                                <div class="img">
+                                    <img
+                                        src="./assets/refrig250.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="preco-button-flex">
+                                    <strong>R$3,50</strong>
+                                    <button>Adicionar</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <h3>Salgados</h3>
-                    <div class="categoria-produto">
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
-                            </div>
-                        </div>
-
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
-                            </div>
-                        </div>
-
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
-                            </div>
-                        </div>
-
-                        <div class="produto">
-                            <h4>Salgado + guaraná</h4>
-                            <div class="img">
-                                <img
-                                    src="./assets/salgadoguaracamp.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="preco-button-flex">
-                                <strong>R$7,00</strong>
-                                <button>Adicionar</button>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
                 </div>
                 <div id="sacola">AAAAAAAAAAAAAAAAAAAA</div>
             </div>
         </main>
+        <footer>
+            Site criado pelo grupo: <br> Philipi Pastor/ Marco Souza/ Andre Junior
+        </footer>
     </body>
 </html>
