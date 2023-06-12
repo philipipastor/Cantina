@@ -19,12 +19,12 @@ $ano = $_POST['ano'];
 
 $sexo = $_POST['sexo']; 
 
-$senha = $_POST['senha'];
-
 $loginn = $_POST['loginn']; 
 
-$sql = "INSERT INTO formulario (nome, celular, nasc, endereco, numero, matricula, turma, ano, sexo, senha, loginn)
-        VALUES ('$nome', '$celular', '$nasc', '$endereco', $numero, '$matricula', '$turma', '$ano', '$sexo', '$senha', '$loginn')";
+$senha = $_POST['senha'];
+
+$sql = "INSERT INTO formulario (nome, celular, nasc, endereco, numero, matricula, turma, ano, sexo, loginn, senha)
+        VALUES ('$nome', '$celular', '$nasc', '$endereco', $numero, '$matricula', '$turma', '$ano', '$sexo', '$loginn', '$senha')";
 
 $result = $conn->exec($sql); 
 
