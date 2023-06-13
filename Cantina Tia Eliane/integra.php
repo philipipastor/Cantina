@@ -36,6 +36,6 @@ echo "<a href='editar.php'>Editar dados</a>";
 
 echo "<br><a href='excluir.php'>Excluir dados</a>"; 
 
-echo "<br><a href='index.html'>Voltar ao Inicio</a>";
+echo "<br><a href='cantina.html'>Voltar ao Inicio</a>";
 
 ?>
