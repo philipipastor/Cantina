@@ -20,6 +20,8 @@
 
         echo "<td><a href=editar.php?id=" . $row['id'] . ">Editar</a></td>";
         echo "<td><a href=excluir.php?id=" . $row['id'] . ">Excluir</a></td></tr>";
+        
     }
     echo "</tbody></table>" ;
+    echo "<br><a href='cantina.html'>Voltar ao Inicio</a>";
 ?>
