@@ -52,6 +52,8 @@ foreach($conn->query($sql) as $row) {
     echo "<br><br>";
 }
     echo "<input type='submit' value='Salvar dados'>";
+    echo "<br>";
+    echo "<a href='consulta.php'>Consultar dados</a>";
 
 echo "</form></body></html>";
 ?>

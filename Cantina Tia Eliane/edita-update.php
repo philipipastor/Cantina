@@ -31,6 +31,8 @@ if (isset($_POST['id'])) {
         // Verificar se a atualização foi bem-sucedida
         if ($result) {
             echo "Dados atualizados com sucesso.";
+            echo "<br>";
+            echo "<a href='consulta.php'>Consultar dados</a>";
         } else {
             echo "Erro ao atualizar os dados: " . $conn->errorInfo()[2];
         }
