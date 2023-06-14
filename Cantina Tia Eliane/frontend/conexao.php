@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=cantina_bd", $username, $password);
+  $conn = new PDO("mysql:host=$servername;dbname=cantida_bd", $username, $password);
   // Msg de sucesso ou erro
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Conexão efetuada com sucesso!  <br><br><br>";
