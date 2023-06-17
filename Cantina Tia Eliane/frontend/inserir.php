@@ -8,13 +8,11 @@ $senha = $_POST['senha'];
 $sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
 if ($conn->exec($sql)) {
-    echo "<p>Registro foi incluído.</p>";
-    echo "<a href='consulta.php'>Consultar dados</a><br>";
-    echo "<a href='editar.php'>Editar dados</a><br>";
-    echo "<a href='excluir.php'>Excluir dados</a><br>";
-    echo "<a href='cantina.html'>Voltar ao Início</a>";
+    echo "<script>alert('Conta criada com sucesso.');</script>";
+    echo "<script>window.location.href = './pages/form-login.html';</script>";
 } else {
-    echo "Erro ao incluir o registro: " . $conn->errorInfo()[2];
+    echo "<script>alert('Erro ao criar conta.');</script>";
+    echo "<script>window.location.href = './pages/index.html';</script>";
 }
 
 $conn = null;

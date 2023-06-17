@@ -1,27 +1,64 @@
 <?php
-    include 'conexao.php';
-    $sql = 'SELECT id, nome, celular, nasc, endereco, numero, matricula, turma, ano, sexo, loginn, senha FROM formulario ORDER BY nome';
-    echo "<table border='1'>";
-    echo "<caption>Consulta aos dados das pessoas cadastras</caption> <br>";
-    echo "<thead><tr><th>Nome</th> <th>Celular</th> <th>Nascimento</th> <th>Endereço</th> <th>Número</th> <th>Matrícula</th> <th>Turma</th> <th>Ano</th> <th>Sexo</th> <th>Login</th> <th>Senha</th <br> <th colspan='2'>Operações</th></tr></thead><tbody>";
+include('conexao.php');?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>Tabela de consulta</title>
+</head>
+<body>
+    <div class="container">
+        <?php
+        // Consulta todos os registros da tabela
+        $sql = "SELECT * FROM usuarios";
+        $resultado = $conn->query($sql);
 
-    foreach ($conn->query($sql) as $row){
-        echo "<tr><td>" . $row['nome'] . "</td>";
-        echo "<td>" . $row['celular'] . "</td>";
-        echo "<td>" . date('d/m/Y',strtotime($row['nasc'])) . "</td>";
-        echo "<td>" . $row['endereco'] . "</td>";
-        echo "<td>" . $row['numero'] . "</td>";
-        echo "<td>" . $row['matricula'] . "</td>";
-        echo "<td>" . $row['turma'] . "</td>";
-        echo "<td>" . $row['ano'] . "</td>";
-        echo "<td>" . $row['sexo'] . "</td>";
-        echo "<td>" . $row['loginn'] . "</td>";
-        echo "<td>" . $row['senha'] . "</td>";
+        // Verifica se existem registros
+        if ($resultado->rowCount() > 0) {
+            echo "<table class='table'>";
+            echo "<thead class='thead-light'>";
+            echo "<tr>";
+            echo "<th>ID</th>";
+            echo "<th>Nome</th>";
+            echo "<th>Email</th>";
+            echo "<th>Senha</th>";
+            echo "<th>Ações</th>";
+            echo "</tr>";
+            echo "</thead>";
+            echo "<tbody>";
 
-        echo "<td><a href=editar.php?id=" . $row['id'] . ">Editar</a></td>";
-        echo "<td><a href=excluir.php?id=" . $row['id'] . ">Excluir</a></td></tr>";
-        
-    }
-    echo "</tbody></table>" ;
-    echo "<br><a href='cantina.html'>Voltar ao Inicio</a>";
+            // Loop através dos resultados da consulta
+            while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['nome'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['senha'] . "</td>";
+                echo "<td>";
+                echo "<a class='btn btn-primary btn-sm me' href='editar.php?id=" . $row['id'] . "'>Editar</a>";
+                echo "<a class='btn btn-danger btn-sm ml-2' href='excluir.php?id=" . $row['id'] . "'>Excluir</a>";
+                echo "</td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+            echo "</table>";
+        } else {
+            echo "<p>Nenhum registro encontrado.</p>";
+        }
+        ?>
+        <div class="mb-3">
+            <a class="btn btn-success mr-2" href="inserirCRUD.php">Adicionar Usuário</a>
+            <a class="btn btn-primary" href="./pages/index.html">Voltar ao Início</a>
+        </div>
+    </div>
+</body>
+</html>
+
+<?php
+$conn = null;
 ?>
+
+</html>

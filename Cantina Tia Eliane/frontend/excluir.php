@@ -1,8 +1,8 @@
 <?php
 include 'conexao.php';
 $id = $_GET['id']; 
-$sql = "DELETE FROM formulario WHERE id='$id'";
+$sql = "DELETE FROM usuarios WHERE id='$id'";
 $result = $conn->exec($sql);
-echo "<p> $result registro foi removido</p>";
-echo "<a href='consulta.php'>Consultar dados</a>";
+echo "<script>alert('Usuário deletado.');</script>";
+echo "<script>window.location.href = 'consulta.php';</script>";
 ?>
