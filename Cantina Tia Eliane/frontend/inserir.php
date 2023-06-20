@@ -5,7 +5,7 @@ $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+$sql = "INSERT INTO text (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
 if ($conn->exec($sql)) {
     echo "<script>alert('Conta criada com sucesso.');</script>";

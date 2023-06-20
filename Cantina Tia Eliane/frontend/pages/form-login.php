@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST["senha"];
     
     // Consulta o banco de dados para verificar se o email e a senha são válidos
-    $sql = "SELECT nome FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+    $sql = "SELECT nome FROM text WHERE email = '$email' AND senha = '$senha'";
     $result = $conn->query($sql);
     
     if ($result->rowCount() == 1) {

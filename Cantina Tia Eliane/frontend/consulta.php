@@ -13,7 +13,7 @@ include('conexao.php');?>
     <div class="container">
         <?php
         // Consulta todos os registros da tabela
-        $sql = "SELECT * FROM usuarios";
+        $sql = "SELECT * FROM text";
         $resultado = $conn->query($sql);
 
         // Verifica se existem registros

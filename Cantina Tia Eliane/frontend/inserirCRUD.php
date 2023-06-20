@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)";
+    $sql = "INSERT INTO text (nome, email, senha) VALUES (:nome, :email, :senha)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':email', $email);

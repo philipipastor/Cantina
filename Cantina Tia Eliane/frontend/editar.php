@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "UPDATE usuarios SET nome=:nome, email=:email, senha=:senha WHERE id=:id";
+    $sql = "UPDATE text SET nome=:nome, email=:email, senha=:senha WHERE id=:id";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':id', $id);
     $stmt->bindParam(':nome', $nome);
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     $id = $_GET['id'];
 
-    $sql = "SELECT * FROM usuarios WHERE id=:id";
+    $sql = "SELECT * FROM text WHERE id=:id";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':id', $id);
     $stmt->execute();
