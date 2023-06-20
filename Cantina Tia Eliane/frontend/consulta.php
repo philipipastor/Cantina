@@ -51,7 +51,7 @@ include('conexao.php');?>
         ?>
         <div class="mb-3">
             <a class="btn btn-success mr-2" href="inserirCRUD.php">Adicionar Usuário</a>
-            <a class="btn btn-primary" href="./pages/index.html">Voltar ao Início</a>
+            <a class="btn btn-primary" href="./pages/index.php">Voltar ao Início</a>
         </div>
     </div>
 </body>

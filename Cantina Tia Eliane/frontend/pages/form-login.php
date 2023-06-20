@@ -1,3 +1,33 @@
+<?php
+include('../conexao.php');
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
+    
+    // Consulta o banco de dados para verificar se o email e a senha são válidos
+    $sql = "SELECT nome FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+    $result = $conn->query($sql);
+    
+    if ($result->rowCount() == 1) {
+        // Login bem-sucedido, cria uma sessão e redireciona para a página desejada
+        echo '<script>alert("Login realizado com sucesso!");</script>';
+        session_start();
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+        $_SESSION["nome_usuario"] = $row["nome"];
+        
+        // Exibe um alerta ao usuário
+        
+        header("Location: index.php");
+        exit();
+    } else {
+        // Login inválido, exibe uma mensagem de erro
+        echo '<script>alert("Email ou senha inválidos.");</script>';
+    }
+    
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,8 +44,7 @@
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"
         ></script>
-        <script src="../js/cadastro.js"></script>
-        <title>Document</title>
+        <title>oii</title>
     </head>
     <body>
         <header>
@@ -58,40 +87,25 @@
                         <div class="me-5">
                             <a
                                 class="btn btn-danger me-5"
-                                href="./form-login.php"
+                                href="./form-cadastro.html"
                                 role="button"
-                                >Login
+                                >Cadastre-se
                             </a>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
-        <form name="cantida_bd" action="../inserir.php" method="post">
+        <form name="cantida_bd" action="" method="post">
             <div
                 class="form-group mb-5 d-flex align-items-center justify-content-around vh-50"
             >
-                <div>
-                    <h1>Cantina Tia Eliane</h1>
-                    <p>Mate sua fomo conosco!!</p>
-                </div>
                 <div class="col-md-4">
-                    <label for="inome" class="form-label mt-3">Nome</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="inome"
-                        name="nome"
-                        placeholder="Digite seu nome"
-                        required
-                        minlength="3"
-                        maxlength="30"
-                    />
                     <label for="iemail" class="form-label mt-3">Email</label>
                     <input
                         type="email"
                         class="form-control"
-                        id="email"
+                        id="iemail"
                         name="email"
                         placeholder="Digite seu email"
                     />
@@ -102,14 +116,24 @@
                         name="senha"
                         class="form-control"
                         aria-labelledby="passwordHelpBlock"
-                        placeholder="Crie uma senha"
+                        placeholder="Digite sua senha"
                         required
                     />
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-danger mt-3">
-                            Finalizar cadastro
+                            Login
                         </button>
                     </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <p>
+                            Ainda não é cadastrado?
+                            <a href="./form-cadastro.html">Clique aqui.</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h1>Cantina Tia Eliane</h1>
+                    <p>Faça seu login para aproveitar nossas vantagens</p>
                 </div>
             </div>
         </form>
