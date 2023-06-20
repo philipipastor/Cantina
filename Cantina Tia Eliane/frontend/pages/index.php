@@ -18,7 +18,7 @@ session_start();
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"
         ></script>
-        <title>Document</title>
+        <title>Home/Cardápio</title>
     </head>
     <body>
         <header>
